@@ -20,7 +20,7 @@ make RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
 %make_install
 
 %clean
-[ $RPM_BUILD_ROOT -ne "/" ] && rm -rf $RPM_BUILD_ROOT
+[ $RPM_BUILD_ROOT != "/" ] && rm -rf $RPM_BUILD_ROOT
 
 %files
 /etc/mosquitto/auth-plug.so
